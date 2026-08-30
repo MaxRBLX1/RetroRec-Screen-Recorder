@@ -69,7 +69,7 @@ PhantomRec is designed to work on **any PC** — no exceptions, no lockouts
 
 - **If you have a modern GPU** (NVIDIA Kepler+, AMD GCN 1.0+), you get **60 FPS** recording with DDAGrab/GFX. These APIs are fast and efficient.
 
-- **If you have an older GPU** (NVIDIA Tesla/Fermi, AMD TeraScale), PhantomRec **still uses all capture APIs** but your games will lag because the GPU itself is too old to run the modern APIs that PhantomRec uses properly. Recording still works via GDI fallback. If you experience lag while using GDI, your CPU is the bottleneck, not the GPU.
+- **If you have an older GPU** (NVIDIA Tesla/Fermi, AMD TeraScale), PhantomRec **still uses all capture APIs (including DDAGrab and GFX)** but your games will lag because the GPU itself is too old to run the modern APIs that PhantomRec uses properly. The capture APIs work, but the GPU struggles with modern DirectX/OpenGL calls, causing game lag. Recording still works via GDI fallback. If you experience lag while using GDI, your CPU is the bottleneck, not the GPU.
 
 - **If you have no GPU** (Microsoft Basic Display Adapter), PhantomRec uses **GDI + CPU encoding**. Recording is still smooth.
 
